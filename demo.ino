@@ -82,8 +82,8 @@ void loop() {
   while (Serial.available() > 0) {
     char c = (char)Serial.read();
 
-  if (c == '\r') continue;           // skip CR
-  if (c == '\n') {                   // end of line => parse
+    if (c == '\r') continue;           // skip CR
+    if (c == '\n') {                   // end of line => parse
       lineBuf[lineLen] = '\0';
       if (lineLen > 0) {
         float f = atof(lineBuf);
@@ -95,11 +95,11 @@ void loop() {
           Serial.println(F("\"}"));
         }
       }
-  lineLen = 0;                     // reset buffer
+      lineLen = 0;                     // reset buffer
     } else if (lineLen + 1 < sizeof(lineBuf)) {
-  lineBuf[lineLen++] = c;          // accumulate
+      lineBuf[lineLen++] = c;          // accumulate
     } else {
-  // overflow - reset and report error
+      // overflow - reset and report error
       lineLen = 0;
       Serial.println(F("{\"event\":\"error\",\"reason\":\"line_overflow\"}"));
     }
