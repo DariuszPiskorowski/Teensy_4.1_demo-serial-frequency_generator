@@ -27,7 +27,7 @@ A simple demo for Teensy 4.1 that demonstrates:
 
 ### Installation
 1. Clone or download this repository.
-2. Open the `demo` file in Arduino IDE or copy its contents into a new sketch.
+2. Open the `demo.ino` file in Arduino IDE or copy its contents into a new sketch.
 3. Select the correct board (Teensy 4.1) and port.
 4. Upload the code to your Teensy.
 
@@ -66,7 +66,7 @@ If you send an invalid or non-positive value:
 
 ## File Overview
 
-- `demo` — Main source file with all logic and comments in English.
+- `demo.ino` — Main source file with all logic and comments in English.
 - `README.md` — This documentation.
 
 ---
